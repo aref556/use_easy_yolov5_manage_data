@@ -1,0 +1,24 @@
+jtype: Flow
+version: '1'
+with:
+  protocol: 'http'
+  cors: True
+  port_expose: $JINA_PORT
+executors:
+  - name: ImageLoader
+    uses: ImageLoaderTest
+    py_modules:
+      - executors.py
+  - name: PreprocessingData
+    uses: PreprocessingDataTest
+    py_modules:
+      - executors.py
+  - name: PersonReidentification
+    uses: PersonReidentificationTest
+    py_modules:
+      - executors.py
+  - name: SimpleIndexer
+    uses: SimpleIndexerTest
+    py_modules:
+      - executors.py
+    

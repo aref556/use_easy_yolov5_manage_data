@@ -1,0 +1,4 @@
+jtype: YoloV5
+metas:
+  py_modules:
+    - executor.py
